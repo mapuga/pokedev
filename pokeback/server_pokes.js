@@ -75,5 +75,5 @@ app.patch('/usuario/:id', (req, res) => {
 
 // Solo para Local
 app.listen(3000, () => {
-    console.log('Server Peliculas ON Port 3000')
+    console.log('Server Pokemon ON Port 3000')
 });
