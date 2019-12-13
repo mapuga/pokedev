@@ -9,5 +9,7 @@ mongoose.connect(URL, (err) => {
 });
 
 module.exports = {
+    PokenTeam,
+    Pokemon,
     PokenUser
 }

@@ -1,4 +1,4 @@
-// Modelo UserPoker
+// Modelo PokenUser
 const mongoose = require('mongoose');
 
 const pokenuserSchema = new mongoose.Schema({
@@ -11,7 +11,7 @@ const pokenuserSchema = new mongoose.Schema({
         type: String,
         enum: ['F', 'M', 'SN']
     },
-    games_won: {
+    gameswon: {
         type: [String]
     }
 });
