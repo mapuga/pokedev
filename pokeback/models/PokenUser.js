@@ -16,6 +16,14 @@ const pokenuserSchema = new mongoose.Schema({
     }
 });
 
+/* ** Body
+{
+    "username": "Player01",
+    "country": "MX",
+    "sex": "M",
+    "gameswon": ["Game 1"]
+}
+*/
 const PokenUser = mongoose.model('PokenUser', pokenuserSchema);
 
 module.exports = PokenUser;

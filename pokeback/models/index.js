@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const PokenUser = require('./PokenUser');
+const PokenTeam = require('./PokenTeam');
+const Pokemon = require('./Pokemon');
 
 const URL = 'mongodb+srv://admin:123123AB@cluster0-7iyok.mongodb.net/test?retryWrites=true&w=majority';
 

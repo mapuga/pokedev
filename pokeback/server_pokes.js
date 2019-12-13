@@ -1,7 +1,7 @@
 // Server
 const express = require('express');
 const cors = require('cors');
-// const { Pelicula, Director } = require('./models/index');
+const { PokenUser, PokenTeam, Pokemon } = require('./models/index');
 const PORT = process.env.PORT
 const app = express();
 
@@ -12,13 +12,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Endpoint Crear Usuario
-app.post('/username', (req, res) => {
-    const newPelicula = Pelicula(req.body);
-    newPelicula.save((err, peli) => {
+app.post('/pokeapi/username', (req, res) => {
+    const newPokenUser = PokenUser(req.body);
+    newPokenUser.save((err, pokenUser) => {
         err
             ?
             res.status(400).send(err) :
-            res.status(201).send(peli)
+            res.status(201).send(pokenUser)
     });
 });
 
