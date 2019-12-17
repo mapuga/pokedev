@@ -17,7 +17,16 @@ const pokenteamSchema = new mongoose.Schema({
 /** Body
 {
     "teamname": "Equipo 1",
-    "username": "id_user"
+    "username": "id_user",
+    "pokemons": [
+        {
+            "namepokemon": "Pikachu",
+            "idpokemon": 20,
+            "moves": "",
+            "sprites": "",
+            "typepokemon": ""
+        }
+    ]
 }
  */
 
