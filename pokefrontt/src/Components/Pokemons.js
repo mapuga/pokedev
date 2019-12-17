@@ -1,15 +1,33 @@
 import React,{Component} from 'react';
-import Nav from './Nav';
-import Pokemon from './Pokemon';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import './card.css'
+import axios from 'axios';
 
 class Pokemons extends Component{
 
+	constructor(props){
+		super(props);
+		this.state = {
+			pokemon: {
+				name: [],
+				sprites: []
+			}
+		}
+		
+		console.log(this.getPokemons());
+	}
+	
+
+	getPokemons(){
+		let num = 5;
+		for(let i = 0; i <= num.length; i++) {
+			console.log(num[i]);		
+		}
+	}
+
 	render(){
 		return(
-			<div className='container'>
-				<Nav />
+			<div>
+				
 			</div>
 		);
 	}
