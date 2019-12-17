@@ -16,7 +16,7 @@ const pokenuserSchema = new mongoose.Schema({
     }
 });
 
-/* ** Body
+/** Body
 {
     "username": "Player01",
     "country": "MX",

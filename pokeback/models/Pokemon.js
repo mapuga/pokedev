@@ -18,6 +18,15 @@ const pokemonSchema = new mongoose.Schema({
     }
 });
 
-const Pokemon = mongoose.model('Pokemon', pokemonSchema);
+/** Body
+{
+    "namepokemon": "Pikachu",
+    "idpokemon": 20,
+    "moves": "",
+    "sprites": "",
+    "typepokemon": ""
+}
+ */
 
-module.exports = Pokemon;
+
+module.exports = pokemonSchema;
