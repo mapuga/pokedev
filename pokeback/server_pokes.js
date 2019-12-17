@@ -64,10 +64,32 @@ app.patch('/usuario/:id', (req, res) => {
 });
 
 // =========================================== Endpoints Teams ===========================================================
+// Endpoint Crear Team
+app.post('/pokeapi/addteam', (req, res) => {
+    const newTeam = PokenTeam(req.body);
+    newTeam.save((err, team) => {
+        err ?
+            res.status(400).send(err) :
+            res.status(201).send(team)
+    });
+});
+
+// Obtiene el equipo con sus pokemons
+app.get('/pokeapi/team/:id', (req, res) => {
+    const id = req.params.id
+    Pelicula.findById(id).exec()
+        .then((result) => {
+            result ?
+                res.status(200).send(result) :
+                res.status(404).send('No existe equipo')
+        })
+        .catch((err) => {
+            res.status(500).send(err)
+        });
+});
 
 
-
-
+// =========================================== Configuración del puerto ===================================================
 // Solo para Heroku
 // app.listen(PORT, () => {
 //     console.log('Server Peliculas ON')
